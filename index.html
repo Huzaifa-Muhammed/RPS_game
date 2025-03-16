@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rock Paper Scissor Game</h1>
+
+    <div class="choiceIcon">
+        <div class="userChoices">
+            <div id="Rock">
+                <img src="images/rock.png">
+            </div>
+            <div id="Paper">
+                <img src="images/paper.png">
+            </div>
+            <div id="Scissor">
+                <img src="images/scissors.png">
+            </div>
+        </div>
+        <div class="compChoices">
+            <div id="compRock">
+                <img src="images/rock.png">
+            </div>
+            <div id="compPaper">
+                <img src="images/paper.png">
+            </div>
+            <div id="compScissor">
+                <img src="images/scissors.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="selectedChoice">
+        <p id="selectedUserChoice">You Picked :</p>
+        <p id="selectedCompChoice">Computer Picked :</p>
+    </div>
+
+    <div class="scoreContainer">
+        <p id="userScore">Your Score :0</p>
+        <p id="compScore">Computer's Score :0</p>
+    </div>
+
+    <div class="msgContainer">
+        <p class="resultMsg">Pick One from your side</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
