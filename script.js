@@ -37,14 +37,14 @@ document.addEventListener("DOMContentLoaded", function (){
       for (let img of compChoices) {
         img.style.opacity = "0.5";
         img.style.transform = "scale(1.1)";
-        await delay(500);
+        await delay(300);
         img.style.opacity = "1";
         img.style.transform = "scale(1)";
       }
 
       selectedCompChoice.textContent = `Guess What...?👀`;
 
-      await delay(1000);
+      await delay(800);
       
       selectedCompChoice.textContent = `Computer Picked: ${computerChoice}`;
 
