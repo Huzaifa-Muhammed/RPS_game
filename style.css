@@ -27,6 +27,7 @@ h1{
 
 .userChoices img:hover{
     opacity: 0.5;
+    transform: scale(1.1);
 }
 
 .userChoices, .compChoices{

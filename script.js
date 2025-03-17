@@ -5,14 +5,15 @@ document.addEventListener("DOMContentLoaded", function (){
     let userScore = 0;
     let compScore = 0;
 
-    const gameChoices = document.querySelectorAll(".userChoices div");
+    const userChoices = document.querySelectorAll(".userChoices div");
+    const compChoices = document.querySelectorAll(".compChoices img");
     const selectedUserChoice = document.querySelector("#selectedUserChoice");
     const selectedCompChoice = document.querySelector("#selectedCompChoice");
     const resultMsg = document.querySelector(".resultMsg");
     const userScoreText = document.querySelector("#userScore");
     const compScoreText = document.querySelector("#compScore");
 
-    gameChoices.forEach((choice) => {
+    userChoices.forEach((choice) => {
       const userChoice = choice.getAttribute("id");
 
       choice.addEventListener("click", async () => {
@@ -31,14 +32,23 @@ document.addEventListener("DOMContentLoaded", function (){
       const computerChoices = ["Rock", "Paper", "Scissor"];
       let computerChoice = computerChoices[index];
 
-      console.log(computerChoice);
       selectedCompChoice.textContent = `Thinking...`;
 
-      await delay(2000); // Wait for 2 seconds
+      for (let img of compChoices) {
+        img.style.opacity = "0.5";
+        img.style.transform = "scale(1.1)";
+        await delay(500);
+        img.style.opacity = "1";
+        img.style.transform = "scale(1)";
+      }
 
+      selectedCompChoice.textContent = `Guess What...?👀`;
+
+      await delay(1000);
+      
       selectedCompChoice.textContent = `Computer Picked: ${computerChoice}`;
 
-      return computerChoice; // Return the choice after delay
+      return computerChoice;
     }
 
     function playGame(userChoice, computerChoice){
